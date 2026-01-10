@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayman Taşımacılık - Profesyonel Servis Taşımacılığı</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230066cc' width='100' height='100'/><text x='50' y='65' font-size='70' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
+    <link rel="shortcut icon" type="image/webp" href="assets/logo.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +15,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Sayman Taşımacılık</div>
+            <div class="logo-section">
+                <img src="assets/logo.webp" alt="Sayman Logo" class="logo-img">
+                <span class="logo-text">Sayman Taşımacılık</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Ana Sayfa</a></li>
                 <li><a href="#services">Hizmetler</a></li>
@@ -75,10 +76,15 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
+            <h2 class="section-title">Hakkımızda</h2>
             <div class="about-content">
-                <h2 class="section-title">Hakkımızda</h2>
-                <p>Sayman Taşımacılık olarak, Soma ve çevresinde profesyonel taşımacılık hizmetlerinde lider konumdayız. Geniş araç filomuz, düzenli bakım ve hijyen standartlarına uygun taşımacılık anlayışımız ile çalışan servislerinden öğrenci taşımacılığına kadar her alanda kaliteli hizmet veriyoruz.</p>
-                <p>Şirketinizin ya da kurumunuzun ulaşım ihtiyaçlarını en verimli şekilde karşılamak için, esnek planlama seçenekleri ve özel çözümler sunuyoruz. Deneyimli sürücülerimiz ve modern araçlarımızla, yolcularınızın güvenliği ve konforunu her zaman en üst düzeyde tutarız.</p>
+                <div class="about-text">
+                    <p>Sayman Taşımacılık olarak, Soma ve çevresinde profesyonel taşımacılık hizmetlerinde lider konumdayız. Geniş araç filomuz, düzenli bakım ve hijyen standartlarına uygun taşımacılık anlayışımız ile çalışan servislerinden öğrenci taşımacılığına kadar her alanda kaliteli hizmet veriyoruz.</p>
+                    <p>Şirketinizin ya da kurumunuzun ulaşım ihtiyaçlarını en verimli şekilde karşılamak için, esnek planlama seçenekleri ve özel çözümler sunuyoruz. Deneyimli sürücülerimiz ve modern araçlarımızla, yolcularınızın güvenliği ve konforunu her zaman en üst düzeyde tutarız.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/boxer.webp" alt="Sayman Taşımacılık Araçları" class="boxer-vehicle">
+                </div>
             </div>
         </div>
     </section>
@@ -132,10 +138,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Sayman Taşımacılık. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="#home">Gizlilik Politikası</a>
-                <a href="#home">Kullanım Şartları</a>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.webp" alt="Sayman Logo" class="footer-logo-img">
+                    <p>&copy; 2026 Sayman Taşımacılık. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Gizlilik Politikası</a>
+                    <a href="#home">Kullanım Şartları</a>
+                </div>
             </div>
         </div>
     </footer>
