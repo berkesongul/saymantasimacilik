@@ -22,9 +22,11 @@ curl -I http://127.0.0.1:8087/
 [`deploy/vps-nginx.conf`](deploy/vps-nginx.conf) dosyasını VPS'de `/etc/nginx/sites-available/saymantasimacilik.com` konumuna örnek olarak kopyalayın. Sunucunuzun mevcut Nginx dosya düzeni farklıysa aynı `server_name` ve `proxy_pass` ayarlarını o düzene ekleyin. Bu alan adı için zaten bir Nginx `server` bloğu varsa ikinci bir blok açmayın; mevcut bloğun `location /` bölümünü konteynere yönlendirin.
 
 ```sh
+sudo cp deploy/vps-nginx.conf /etc/nginx/sites-available/saymantasimacilik.com
 sudo ln -s /etc/nginx/sites-available/saymantasimacilik.com /etc/nginx/sites-enabled/saymantasimacilik.com
 sudo nginx -t
 sudo systemctl reload nginx
+curl -I http://saymantasimacilik.com/
 ```
 
 Sembolik bağlantı zaten varsa tekrar oluşturmayın. HTTPS için mevcut sertifika yönetiminizi kullanın. Certbot'un Nginx eklentisini kullanıyorsanız ve bu alan adları için sertifika henüz yoksa `sudo certbot --nginx -d saymantasimacilik.com -d www.saymantasimacilik.com` çalıştırabilirsiniz. Sertifika kurulduktan sonra iki HTTPS adresini de kontrol edin.
