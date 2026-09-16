@@ -1,0 +1,7 @@
+.git
+.DS_Store
+.env
+.env.*
+README.md
+compose.yaml
+deploy/vps-nginx.conf
