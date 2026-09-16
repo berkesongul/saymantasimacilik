@@ -5,7 +5,7 @@ Bu proje statik bir web sitesidir. Docker Compose siteyi bir Nginx konteynerinde
 ## Gereksinimler
 
 - VPS üzerinde Docker Engine ve Docker Compose eklentisi
-- `saymantasimacilik.com` DNS kaydının VPS'ye yönlenmesi
+- `saymantasimacilik.com` DNS `A` kaydının VPS'ye yönlenmesi; `www` CNAME kaydının bu alan adına yönlenmesi
 - VPS üzerinde çalışan Nginx ve HTTPS sertifikası yönetimi
 - Sunucuda `127.0.0.1:8087` portunun başka bir servis tarafından kullanılmaması
 
@@ -27,7 +27,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-Sembolik bağlantı zaten varsa tekrar oluşturmayın. HTTPS için mevcut sertifika yönetiminizi kullanın. Certbot'un Nginx eklentisini kullanıyorsanız ve bu alan adı için sertifika henüz yoksa `sudo certbot --nginx -d saymantasimacilik.com` çalıştırabilirsiniz. Sertifika kurulduktan sonra `https://saymantasimacilik.com` adresini kontrol edin.
+Sembolik bağlantı zaten varsa tekrar oluşturmayın. HTTPS için mevcut sertifika yönetiminizi kullanın. Certbot'un Nginx eklentisini kullanıyorsanız ve bu alan adları için sertifika henüz yoksa `sudo certbot --nginx -d saymantasimacilik.com -d www.saymantasimacilik.com` çalıştırabilirsiniz. Sertifika kurulduktan sonra iki HTTPS adresini de kontrol edin.
 
 ## Güncelleme ve bakım
 
